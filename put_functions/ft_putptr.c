@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: csilva-r <csilva-r@student.42berlin.de>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/05 13:43:45 by csilva-r          #+#    #+#             */
+/*   Updated: 2024/05/05 13:43:46 by csilva-r         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft_printf.h"
 
 int	ft_putptr(unsigned long long ptr, char *charset, int counter)
 {
-	int		base;
+	unsigned long long		base;
 
 	base = ft_strlen(charset);
 	if (ptr <= base - 1)
