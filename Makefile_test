@@ -36,4 +36,7 @@ clean:
 fclean: clean
 		$(RM) $(NAME)
 
+test:
+	$(CC) main_test.c $(SRCS) -o exe
+
 re:	fclean all
