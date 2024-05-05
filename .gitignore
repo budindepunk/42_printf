@@ -1,0 +1,6 @@
+*.[oa]
+a.out
+.*
+!.gitignore
+*.gch
+exe
