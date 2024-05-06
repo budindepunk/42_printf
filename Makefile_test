@@ -32,6 +32,7 @@ $(NAME):	$(OBJS)
 
 clean:
 		$(RM) $(OBJS)
+		$(RM) exe
 
 fclean: clean
 		$(RM) $(NAME)
