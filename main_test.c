@@ -57,15 +57,15 @@ int main(void)
     printf(" || MY printf returned: %d\n", ft_printf("%%"));
     
     // bunch of things at once
-    // printf("\n+++ bunch-o-things +++\n");
-    // printf(" || OG printf returned: %d\n", printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
-    // printf(" || MY printf returned: %d\n", ft_printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
-    // printf(" || OG printf returned: %d\n", printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
-    // printf(" || MY printf returned: %d\n", ft_printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
+    printf("\n+++ bunch-o-things +++\n");
+    printf(" || OG printf returned: %d\n", printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
+    printf(" || MY printf returned: %d\n", ft_printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
+    printf(" || OG printf returned: %d\n", printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
+    printf(" || MY printf returned: %d\n", ft_printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
 
     // ??
-    //printf("\n+++ no arguments ?? undefined behavior +++\n");
-    //printf(" || OG printf returned: %d\n", ft_printf("esta es la fallida: %s"));
+    printf("\n+++ no arguments ?? undefined behavior +++\n");
+    printf(" || OG printf returned: %d\n", ft_printf("esta es la fallida: %s"));
     
     return(0);
 }
