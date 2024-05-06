@@ -29,5 +29,6 @@ int		ft_putchar(char c, int counter);
 int		ft_putnbr(int n, char *charset, int counter, int sign_matters);
 int		ft_putstr(char *s, int counter);
 int		ft_putptr(unsigned long long ptr, char *charset, int counter);
+int	    ft_putunbr(unsigned int n, char *charset, int counter);
 
 #endif

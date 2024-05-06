@@ -13,7 +13,7 @@
 SRCS = ft_printf.c arg_dispatch.c \
 		put_functions/ft_putchar.c put_functions/ft_putnbr.c \
 		put_functions/ft_putptr.c put_functions/ft_putstr.c \
-		put_functions/ft_strlen.c
+		put_functions/ft_strlen.c put_functions/ft_putunbr.c
 OBJS = $(SRCS:.c=.o)
 NAME = libftprintf.a
 

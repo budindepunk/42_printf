@@ -6,7 +6,7 @@
 /*   By: csilva-r <csilva-r@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 19:00:32 by csilva-r          #+#    #+#             */
-/*   Updated: 2024/05/04 19:00:38 by csilva-r         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:54:25 by csilva-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	arg_dispatch(const char c, va_list args, int count)
 	else if (c == 'd' || c == 'i')
 		count = ft_putnbr(va_arg(args, int), DEC_BASE, count, 1);
 	else if (c == 'u')
-		count = ft_putnbr(va_arg(args, unsigned int), DEC_BASE, count, 0);
+		count = ft_putunbr(va_arg(args, unsigned int), DEC_BASE, count);
 	else if (c == 'x')
-		count = ft_putnbr(va_arg(args, unsigned int), HEX_BASE_LOW, count, 1);
+		count = ft_putunbr(va_arg(args, unsigned int), HEX_BASE_LOW, count);
 	else if (c == 'X')
-		count = ft_putnbr(va_arg(args, unsigned int), HEX_BASE_UPP, count, 1);
+		count = ft_putunbr(va_arg(args, unsigned int), HEX_BASE_UPP, count);
 	else if (c == 'p')
 	{
 		count = ft_putstr("0x", count);
