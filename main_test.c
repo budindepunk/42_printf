@@ -1,33 +1,18 @@
 #include "ft_printf.h"
 #include <unistd.h>
 #include <stdio.h>
-
+#include <limits.h>
 int main(void)
 {
-/* ---- test putnbr ----
-    ft_putnbr_base(255, DEC_BASE);
-    ft_putchar_fd('\n', 1);
-
-    ft_putnbr_base(255454656, HEX_BASE_LOW);
-    ft_putchar_fd('\n', 1);
-
-    ft_putnbr_base(255454656, HEX_BASE_UPP);
-    ft_putchar_fd('\n', 1);
-*/
-/* ---- test counter ---- 
-    int counter = 0;
-    printf("counter before printing is %d\n", counter);
-    printf("counter after printing is %d\n", ft_putnbr_base(786, DEC_BASE, counter));
-*/
 /* test for each type */
 
     char *string = "holaholahola";
     char charcito = 'g';
-    int i = 465;
-    int d = -95;
+    int i = INT_MIN;
+    int d = INT_MAX;
     unsigned int ui_pos = 95;
-    int ui_neg = -95;
-    int hex = 1500;
+    unsigned int ui_neg = -95;
+    int hex = -1500;
 
     // string    
     printf("\n+++ s +++\n");
@@ -39,22 +24,17 @@ int main(void)
     printf(" || OG printf returned: %d\n", printf("%c", charcito));
     printf(" || MY printf returned: %d\n", ft_printf("%c", charcito));
     
-    // int
+    // int && dec
     printf("\n+++ i +++\n");
-    printf(" || OG printf returned: %d\n", printf("%i", i));
-    printf(" || MY printf returned: %d\n", ft_printf("%i", i));
-    
-    // dec
-    printf("\n+++ d +++\n");
-    printf(" || OG printf returned: %d\n", printf("%d", d));
-    printf(" || MY printf returned: %d\n", ft_printf("%d", d));
+    printf(" || OG printf returned: %d\n", printf("%i and %d", i, d));
+    printf(" || MY printf returned: %d\n", ft_printf("%i and %d", i, d));
     
     // unsigned int
     printf("\n+++ u +++\n");
-    printf(" || OG printf returned: %d\n", printf("%u", ui_pos));
-    printf(" || MY printf returned: %d\n", ft_printf("%u", ui_pos));
-    printf(" || OG printf returned: %d\n", printf("%u", ui_neg));
-    printf(" || MY printf returned: %d\n", ft_printf("%u", ui_neg));
+    printf(" || u = %d. OG printf returned: %d\n", ui_pos, printf("%u", ui_pos));
+    printf(" || u = %d. MY printf returned: %d\n", ui_pos, ft_printf("%u", ui_pos));
+    printf(" || u = %d. OG printf returned: %d\n", ui_neg, printf("%u", ui_neg));
+    printf(" || u = %d. MY printf returned: %d\n", ui_neg, ft_printf("%u", ui_neg));
     
     // hex lower
     printf("\n+++ x +++\n");
@@ -77,15 +57,15 @@ int main(void)
     printf(" || MY printf returned: %d\n", ft_printf("%%"));
     
     // bunch of things at once
-    printf("\n+++ bunch-o-things +++\n");
-    printf(" || OG printf returned: %d\n", printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
-    printf(" || MY printf returned: %d\n", ft_printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
-    printf(" || OG printf returned: %d\n", printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
-    printf(" || MY printf returned: %d\n", ft_printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
+    // printf("\n+++ bunch-o-things +++\n");
+    // printf(" || OG printf returned: %d\n", printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
+    // printf(" || MY printf returned: %d\n", ft_printf("hola esto es una string: %s y esto es un puntero: %p", string, &string));
+    // printf(" || OG printf returned: %d\n", printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
+    // printf(" || MY printf returned: %d\n", ft_printf("%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
 
     // ??
-    printf("\n+++ no arguments ?? undefined behavior +++\n");
-    printf(" || OG printf returned: %d\n", ft_printf("esta es la fallida: %s"));
+    //printf("\n+++ no arguments ?? undefined behavior +++\n");
+    //printf(" || OG printf returned: %d\n", ft_printf("esta es la fallida: %s"));
     
     return(0);
 }
