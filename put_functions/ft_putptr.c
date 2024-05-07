@@ -16,6 +16,11 @@ int	ft_putptr(unsigned long long ptr, char *charset, int counter)
 {
 	unsigned long long		base;
 
+	if ((void *)ptr == NULL)
+	{
+		counter = ft_putstr("(nil)", counter);
+		return (counter);
+	}
 	base = ft_strlen(charset);
 	if (ptr <= base - 1)
 		counter = ft_putchar(charset[ptr % base], counter);

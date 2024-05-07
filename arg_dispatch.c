@@ -31,9 +31,10 @@ int	arg_dispatch(const char c, va_list args, int count)
 		count = ft_putunbr(va_arg(args, unsigned int), HEX_BASE_UPP, count);
 	else if (c == 'p')
 	{
-		count = ft_putstr("0x", count);
 		ptr = va_arg(args, void *);
-		count = ft_putptr((unsigned long long)ptr, HEX_BASE_LOW, count);
+		if (ptr != NULL)
+			count = ft_putstr("0x", count);
+		count = ft_putptr((unsigned long)ptr, HEX_BASE_LOW, count);
 	}
 	else if (c == '%')
 		count = ft_putchar('%', count);
