@@ -19,6 +19,8 @@ int	ft_printf(const char *input, ...)
 	int		counter;
 	int		i;
 
+	if (!input)
+		return (0);
 	i = 0;
 	counter = 0;
 	va_start(args, input);

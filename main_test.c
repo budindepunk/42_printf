@@ -70,6 +70,8 @@ int main(void)
     // ??
     // real printf won't compile in this case. mine throws segfault or prints random things
     printf("\n\t+++ no arguments ?? undefined behavior +++\n");
+    ft_printf(0);
+    ft_printf(NULL);
     printf(" || MY printf returned: %d\n", ft_printf("\testa es la fallida: %s"));
     
     return(0);
