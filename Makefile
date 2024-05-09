@@ -32,8 +32,12 @@ $(NAME):	$(OBJS)
 
 clean:
 		$(RM) $(OBJS)
+		$(RM) exe
 
 fclean: clean
 		$(RM) $(NAME)
+
+test:
+	$(CC) main_test.c $(SRCS) -o exe && ./exe && $(RM) $(OBJS) $(NAME) exe
 
 re:	fclean all

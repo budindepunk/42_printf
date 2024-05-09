@@ -18,7 +18,9 @@ int main(void)
     printf("\n\t+++ s +++\n");
     printf(" || OG printf returned: %d\n", printf("\t%s", string));
     printf(" || MY printf returned: %d\n", ft_printf("\t%s", string));
-    
+    //printf(" || OG printf returned: %d\n", printf("\t%s", NULL)); // this one wont even compile haha
+    printf(" || MY printf returned: %d\n", ft_printf("%s", NULL));
+
     // char
     printf("\n\t+++ c +++\n");
     printf(" || OG printf returned: %d\n", printf("\t%c", charcito));
@@ -68,7 +70,7 @@ int main(void)
     // ??
     // real printf won't compile in this case. mine throws segfault or prints random things
     printf("\n\t+++ no arguments ?? undefined behavior +++\n");
-    printf(" || OG printf returned: %d\n", ft_printf("\testa es la fallida: %s"));
+    printf(" || MY printf returned: %d\n", ft_printf("\testa es la fallida: %s"));
     
     return(0);
 }

@@ -16,6 +16,11 @@ int	ft_putstr(char *s, int counter)
 {
 	int	i;
 
+	if (!s)
+	{
+		counter = ft_putstr("(null)", counter);
+		return (counter);
+	}
 	i = 0;
 	while (s[i] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: csilva-r <csilva-r@student.42berlin.de>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 18:53:33 by csilva-r          #+#    #+#             */
-/*   Updated: 2024/05/04 18:54:39 by csilva-r         ###   ########.fr       */
+/*   Updated: 2024/05/09 15:39:00 by csilva-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int		ft_putchar(char c, int counter);
 int		ft_putnbr(int n, char *charset, int counter, int sign_matters);
 int		ft_putstr(char *s, int counter);
 int		ft_putptr(unsigned long long ptr, char *charset, int counter);
-int	    ft_putunbr(unsigned int n, char *charset, int counter);
+int		ft_putunbr(unsigned int n, char *charset, int counter);
 
 #endif
