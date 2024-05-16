@@ -11,4 +11,7 @@ My printf has to be compatible with these conversions:
 
 <h2>Resources</h2>
 In addition to writing my own tests, I used <a href="https://github.com/xicodomingues/francinette">Francinette</a>. <br>
-I also found <a href="https://www.youtube.com/watch?v=uNp4DElDQyY&themeRefresh=1">this video</a> very useful.
+I also found <a href="https://www.youtube.com/watch?v=uNp4DElDQyY&themeRefresh=1">this video</a> very useful.<br>
+
+<br><img src="https://github.com/budindepunk/42_printf/assets/83190363/80172163-cd2e-4b5a-88cc-f6c504f0de20"> <br>
+<sub>Feel free to reach me through slack at @csilva-r</sub>
