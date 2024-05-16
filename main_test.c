@@ -68,11 +68,14 @@ int main(void)
     printf(" || MY printf returned: %d\n", ft_printf("\t%s, %c, %d, %i, %x, %p", string, charcito, d, i, hex, &hex));
 
     // ??
-    // real printf won't compile in this case. mine throws segfault or prints random things
-    printf("\n\t+++ no arguments ?? undefined behavior +++\n");
+
+    printf("\n\t+++ 0 / null (nothing should happen here) +++\n");
     ft_printf(0);
     ft_printf(NULL);
+    // real printf won't compile in this case. mine throws segfault or prints random things
+    printf("\n\t+++ no arguments ?? undefined behavior +++\n");
     printf(" || MY printf returned: %d\n", ft_printf("\testa es la fallida: %s"));
+
     
     return(0);
 }

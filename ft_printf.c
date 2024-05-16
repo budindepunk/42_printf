@@ -28,8 +28,13 @@ int	ft_printf(const char *input, ...)
 	{
 		if (input[i] == '%')
 		{
-			counter = arg_dispatch(input[i + 1], args, counter);
-			i++;
+			if (input[i + 1])
+			{
+				counter = arg_dispatch(input[i + 1], args, counter);
+				i++;
+			}
+			else
+				return (-1);
 		}
 		else
 			counter = ft_putchar(input[i], counter);
